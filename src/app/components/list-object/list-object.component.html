@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="line" [ngStyle]="{'background-color': color}"></div>
+  <span class="content">
+    <div class="header">
+      <span class="title" [ngStyle]="{'color': color}">{{title}}</span>
+      <div>
+        <span class="material-symbols-outlined" *ngIf='AdminStatus'>
+          close
+        </span>
+      </div>
+    </div>
+      <p>{{text}}</p>
+  </span>
+</div>

@@ -1,0 +1,14 @@
+<div class="personal-container"
+*ngFor="let item of personalinfo"
+>
+  <img class="personal-image" src={{item.image_url}} alt="">
+  <div class="personal-div">
+    <div class="div">
+    <span class="personal-title">{{item.title}}</span>
+    <app-popup-form/>
+  </div>
+    <p class="personal-info">
+      {{item.text}}
+    </p>
+  </div>
+</div>

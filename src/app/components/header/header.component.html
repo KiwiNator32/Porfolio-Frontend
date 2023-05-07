@@ -1,0 +1,23 @@
+<nav class={{nav_class}}>
+  <div class="principal">
+    <img src="assets/inti.png" alt="inti">
+  <button (click)="onClick()" class="mobile nav-button">
+    <span class="material-symbols-outlined mobile">
+      menu
+      </span>
+  </button>
+
+  <div class="desktop router">
+  <form [routerLink]="['/home']">
+    <button  class="router-button">
+      Inicio
+    </button>
+  </form>
+<form [routerLink]="['/login']">
+  <button class="login-button">
+    login
+  </button>
+</form>
+  </div>
+  </div>
+</nav>

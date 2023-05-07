@@ -1,0 +1,62 @@
+<app-banner
+*ngFor="let item of listServiceSvc.bannerlist"
+[id]="item.id"
+[title]="item.title"
+[sub_title]="item.sub_title"
+/>
+<section id="body">
+
+  <app-personal-info/>
+
+<span>
+  <span class="title">Experiencia</span>
+  <p>
+    estas son los lenguajes y frameworks con los que tengo experiencia:
+  </p>
+   <app-list-object
+   *ngFor="let item of listServiceSvc.list"
+   [id]="item.id"
+   [color]="item.color" [title]="item.title"
+   [text]="item.text" />
+</span>
+
+<span id="cards-content">
+  <span class="title">Conocimientos</span>
+  <p>
+    Estas son otras aplicaciones en las cuales tengo conocimientos fuera del ambito de la programacion y/o el diseño web
+  </p>
+</span>
+<div class="cards">
+
+  <app-card
+  *ngFor="let item of listServiceSvc.cardlist"
+  [id]="item.id"
+  [bg_color]="item.bg_color"
+  [bg_title]="item.bg_title"
+  [img_color]="item.img_color"
+  [img_dir]="item.img_dir"
+  [content_text]="item.content_text"
+  [info_link]="item.info_link"
+  />
+</div>
+<div>
+  <span class="title">Estudios</span>
+  <app-ul-list-object
+  *ngFor="let item of listServiceSvc.ullist"
+  [id]="item.id"
+  [title]="item.title"
+  [text]="item.text"
+  />
+</div>
+<div>
+  <span class="title">Proyectos</span>
+  <app-project-article
+  *ngFor="let item of listServiceSvc.artlist"
+  [id]="item.id"
+  [color]="item.color"
+  [title]="item.title"
+  [text]="item.text"
+  [link]="item.link"
+  />
+</div>
+</section>

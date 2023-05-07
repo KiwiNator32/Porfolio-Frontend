@@ -1,0 +1,21 @@
+<div class="body">
+  <div class="banner" [ngStyle]="{'background-color': bg_color}">
+    <span class="material-symbols-outlined" *ngIf='AdminStatus'>
+      close
+    </span>
+    <div class="img" [ngStyle]="{'background-color': img_color}">
+      <img src={{img_dir}} alt="">
+    </div>
+    <span class="name">
+      {{bg_title}}
+    </span>
+  </div>
+  <div class="content">
+    <p>
+      {{content_text}}
+    </p>
+    <form action={{info_link}}>
+      <button type="submit">Mas info</button>
+   </form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div *ngIf='AdminStatus'>
+<span class="material-symbols-outlined"  (click)="ChangeState()">
+  edit
+</span>
+
+<div id="background" *ngIf="OpenStatus"></div>
+<form id="body" *ngIf="OpenStatus" [formGroup]="form" (ngSubmit)="onSubmit('modify/new')" novalidate>
+
+  <span class="title">Editar</span>
+
+  <div id="inputs">
+
+    <input type="text" id="title" name="title" formControlName="title" placeholder="Titulo" required>
+    <input type="text" id="image_url" name="image_url" formControlName="image_url" placeholder="Url Imagen" required>
+    <textarea name="text" formControlName="text" id="text" cols="30" rows="10" placeholder="Texto" required maxlength="255"></textarea>
+
+  </div>
+  <div id="submit">
+
+    <input type="submit" value="Aceptar">
+    <button (click)="onCancel()" >Cancelar</button>
+
+  </div>
+
+</form>
+</div>

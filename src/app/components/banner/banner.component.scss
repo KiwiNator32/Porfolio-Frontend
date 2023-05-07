@@ -1,0 +1,84 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+div
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background-color: var(--primary-color);
+}
+.principal
+{
+  color: var(--primary-text-color);
+
+  font-size: 55px;
+  text-align: center;
+
+  margin: auto  ;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  max-width: 80%;
+
+}
+.secondary
+{
+  color: var(--primary-text-color);
+
+  text-align: center;
+
+  max-width: 80%;
+}
+
+.hidden
+{
+  color: #00000000;
+  filter: blur(15px);
+  transform: scale(90%);
+}
+.visible
+{
+  transition: 1s;
+  top: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  div {
+    height: 55vh;
+
+    align-items: start;
+  }
+  .secondary {
+    font-weight: 700;
+    font-size: 40px;
+
+    text-align: left;
+    width: 60%;
+
+    margin-left: 60px;
+  }
+  .principal {
+    font-weight: 800;
+    font-size: 60px;
+
+    margin: 0px;
+    margin-left: 80px;
+  }
+
+  .hidden
+  {
+    transform: translateX(40px);
+  }
+
+}
